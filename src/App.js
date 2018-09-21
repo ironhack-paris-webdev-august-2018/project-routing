@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route, NavLink } from "react-router-dom";
 
-import logo from './logo.svg';
 import './App.css';
 
 import HomePage from "./components/HomePage.js";
@@ -17,9 +16,10 @@ class App extends Component {
         <header>
           <h1>Project App</h1>
           <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About Us</Link>
-            <Link to="/projects">Our Projects</Link>
+            {/* NavLink adds a special "active" class to the selected link */}
+            <NavLink exact to="/">Home</NavLink>
+            <NavLink to="/about">About Us</NavLink>
+            <NavLink to="/projects">Our Projects</NavLink>
           </nav>
         </header>
 
